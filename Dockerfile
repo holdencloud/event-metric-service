@@ -1,5 +1,6 @@
 FROM openjdk:8-jdk-slim
 ENV PORT 8080
+ENV PROFILES consul,jxconsul,mongosecrets,atlasmongo
 ENV CLASSPATH /opt/lib
 EXPOSE 8080
 
@@ -11,4 +12,4 @@ COPY pom.xml target/lib* /opt/lib/
 # we could do with a better way to know the name - or to always create an app.jar or something
 COPY target/*.jar /opt/app.jar
 WORKDIR /opt
-CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"]
+CMD ["java", "-Dserver.port=${PORT}", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar", "--spring.profiles.active=${PROFILES}"]
