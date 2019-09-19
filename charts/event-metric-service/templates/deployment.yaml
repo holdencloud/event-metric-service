@@ -28,6 +28,13 @@ spec:
         - name: {{ $pkey }}
           value: {{ quote $pval }}
 {{- end }}
+{{- range $.Values.envSecrets }}
+        - name: {{ .name }}
+          valueFrom:
+            secretKeyRef:
+              name: {{ .secret.name }}
+              key: {{ .secret.key | quote }}
+{{- end }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
         livenessProbe:

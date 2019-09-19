@@ -10,6 +10,20 @@ image:
 # define environment variables here as a map of key: value
 env:
 
+envSecrets:
+  - name: MONGO_USERNAME
+    secret:
+      name: mongo-credentials
+      key: username
+  - name: MONGO_PASSWORD
+    secret:
+      name: mongo-credentials
+      key: password
+  - name: MONGO_DATABASE
+    secret:
+      name: mongo-credentials
+      key: database_name
+
 # enable this flag to use knative serve to deploy the app
 knativeDeploy: false
 
