@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://${MONGO_USERNAME}:${MONGO_PASSWORD}@cluster0-lhl8q.mongodb.net/${MONGO_DATABASE}?retryWrites=true&w=majority
+      database: ${MONGO_DATABASE}

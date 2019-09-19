@@ -1,0 +1,27 @@
+server:
+  port: 0
+
+servlet:
+  context-path: /
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /docs
+  api-docs:
+    path: /api-docs
+
+spring:
+  application:
+      name: event-metrics-service
+  cloud:
+    consul:
+      enabled: false
+info:
+  app:
+    name: Event Meric Service

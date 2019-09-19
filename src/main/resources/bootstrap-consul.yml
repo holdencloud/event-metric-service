@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    consul:
+      discovery:
+        instance-id: ${spring.application.name}:${random.int}
+        tags: api-docs-path=${springdoc.api-docs.path}
+        prefer-ip-address: true
+      enabled: true
