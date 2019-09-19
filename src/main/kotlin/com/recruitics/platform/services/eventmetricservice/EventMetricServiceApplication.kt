@@ -67,7 +67,7 @@ class EventMetricController(
   private val eventMetricService: EventMetricService
 ) {
   @GetMapping(produces = [MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_STREAM_JSON_VALUE])
-  fun getPurchaseOrders(
+  fun getEventMetrics(
     @RequestParam("client_id") clientId: Int,
     @RequestParam("start_date", required = false)
     @DateTimeFormat(iso = ISO.DATE)
