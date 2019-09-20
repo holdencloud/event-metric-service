@@ -12,7 +12,7 @@ servlet:
 
 spring:
   application:
-      name: event-metrics-service
+      name: event-metric-service
 info:
   app:
     name: Event Meric Service
