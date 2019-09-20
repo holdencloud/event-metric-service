@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.recruitics.platform.services</groupId>
     <artifactId>event-metric-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.6</version>
     <name>event-metric-service</name>
     <description>Service for creating and querying event metrics</description>
 
