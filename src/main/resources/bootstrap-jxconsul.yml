@@ -1,4 +1,4 @@
 spring:
   cloud:
     consul:
-      host: jx-consul
+      host: jx-consul-server

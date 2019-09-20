@@ -19,9 +19,6 @@ springdoc:
 spring:
   application:
       name: event-metrics-service
-  cloud:
-    consul:
-      enabled: false
 info:
   app:
     name: Event Meric Service
