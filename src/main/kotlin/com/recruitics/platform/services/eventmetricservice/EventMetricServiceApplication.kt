@@ -8,10 +8,7 @@ import io.swagger.v3.oas.annotations.info.Info
 import io.swagger.v3.oas.annotations.tags.Tag
 import org.bson.types.ObjectId
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.runApplication
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient
-import org.springframework.cloud.context.config.annotation.RefreshScope
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.annotation.Id
@@ -32,7 +29,6 @@ import reactor.core.publisher.toMono
 import java.time.LocalDate
 
 @SpringBootApplication
-@EnableDiscoveryClient
 @EnableMongoRepositories
 class EventMetricServiceApplication
 

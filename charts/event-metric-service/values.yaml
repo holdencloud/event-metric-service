@@ -35,7 +35,6 @@ service:
   annotations:
     fabric8.io/expose: "false"
     fabric8.io/ingress.annotations: "kubernetes.io/ingress.class: nginx"
-    consul.hashicorp.com/connect-inject: "true"
 resources:
   limits:
     cpu: 500m

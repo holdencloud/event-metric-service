@@ -9,6 +9,7 @@ metadata:
   name: {{ template "fullname" . }}
 {{- end }}
   labels:
+    service: "true"
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 {{- if .Values.service.annotations }}
   annotations:
