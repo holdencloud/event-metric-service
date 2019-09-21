@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-slim
 ENV PORT 8080
-ENV PROFILES consul,jxconsul,consulk8s,mongosecrets,atlasmongo
+ENV PROFILES mongosecrets,atlasmongo
 ENV CLASSPATH /opt/lib
 EXPOSE 8080
 
